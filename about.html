@@ -1,0 +1,252 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <title>About</title>
+        
+        <style>
+            .body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+    
+                .navbar{
+                     background: rgba(0, 0, 0, 0.6);
+                     padding: 0.1rem; 
+                     padding-left:25%;
+                }
+            
+                .navbar-nav{
+                      text-align: center;
+                }
+                .navbar-nav a{
+                     text-transform: uppercase;
+                     font-family: var(--Roboto);
+                     font-weight:bolder;
+                     color:black;
+                     text-decoration: none;
+                     display: inline-block;
+                     align-items:space-between;
+                     justify-content:space-between;
+                     transition: opacity 0.5s ease;
+                }
+                .navbar-nav a:hover{
+                     opacity: 0.5;
+                }
+            
+          
+                .navbar{
+                     width:100%;
+                     display:flex;
+                     align-items:space-between;
+                     justify-content:space-between;
+                     padding:10px 0;
+    
+                }
+            .logo{
+                 width:190px;
+                 height:60px;
+                 cursor:pointer;
+                 margin-left: 0%;
+            }
+            .navbar ul{
+                  list-style:none;
+                  width:100%;
+                  text-align: right;
+                  padding-right:0px ;
+            }
+                 .navbar ul li{
+                     display:inline-block;
+                     padding-left:25px;
+                     padding-right:0px;
+                    }
+                  .navbar ul a{
+                     color:black;
+                     text-decoration: none;
+                    }
+    
+            .btn{
+                display:flex;
+                align-items:center;
+                padding:10px 20px;
+                border:0;
+                border-color: black;
+                outline:0;
+                border-radius:5px;
+                background:rgba(199, 221, 235, 0.9);
+                color:black;
+                font-weight: bolder;
+                cursor:pointer;
+            }
+
+    
+            /* about */
+.about-content{
+    padding: 0rem 0;
+}
+.about-text{
+    margin: 1rem 0;
+}
+.about-text p{
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}
+            
+    
+    
+    /*footer*/
+        footer{
+           background: rgba(0, 0, 0, 0.6);
+           color:white;
+           text-align: center;
+            padding: 0.5rem 0;
+        }
+        .social-links{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.4rem;
+        }
+             .social-links a{
+                 border: 2px solid #fff;
+                 color:#fff;             
+                 display: block;
+                 width: 40px;
+                 height: 40px; 
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 border-radius: 50%;
+                 text-decoration: none;
+                 margin: 0 0.3rem;
+                 transition: all 0.5s ease;
+                }
+    
+                    .social-links a:hover{
+                         background:black;
+                         color: var(--exDark);
+                    }
+         .footer span{
+            margin-top: 1rem;
+            display: block;
+            font-family: var(--Playfair);
+            letter-spacing: 2px;
+        }
+    
+    /* Media Queries */
+    @media screen and (min-width: 540px){
+        .navbar-nav a{
+            padding-right: 1.2rem;
+            padding-left: 1.2rem;
+        }
+        .banner-title{
+            font-size: 5rem;
+        }
+        .banner form{
+            margin-top: 1.4rem;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    @media screen and (min-width: 768px){
+        .navbar .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-input{
+            padding: 0.8rem 0;
+        }
+        .design-content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .design-item{
+            margin: 0;
+        }
+        .blog-content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+    
+    @media screen and (min-width: 992px){
+        .blog-content{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .about-content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3rem;
+            align-items: center;
+        }
+    }
+    
+    @media screen and (min-width: 1200px){
+        .design-content{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    </style>
+    
+    <!--navigation-->
+    <nav class = "navbar">
+        <div class = "container">
+            <img src="images/logo1.png" class="logo">
+          <div class = "navbar-nav">
+            <ul>
+            <li><button type="home" class="btn"><a href = "index.html">home</a></button></li>
+                <li><button type="blogs"class="btn"><a href = "menu.html">blogs</a></button></li>
+                    <li><button type="about"class="btn"><a href = "about.html">about</a></button></li>
+                        <li><button type="logout"class="btn"><a href = "#">log out</a></button></li>
+                        <li><button type="contact" class="btn"><a href="#">CONTACT</a></BUTTON></li>
+                        </ul>
+          </div>
+        </div>
+    </nav>
+
+
+
+        <section class = "about" id = "about">
+            <div class = "container">
+              <div class = "about-content">
+                <div>
+                  <img src = "images/logo1.png" alt = "">
+                </div>
+                <div class = "about-text">
+                  <div class = "title">
+                    <h1>ABOUT US</h1>
+                    <p>Welcome to VISHI BLOGS, your one-stop destination for diverse and engaging content! Whether you're looking for expert advice, inspirational stories, or the latest trends across a variety of topics, you've come to the right place</p>
+                  </div>
+                  <h2>Join the Conversation</h2>
+                   <p>We invite you to join the conversation! Comment, share, and engage with our posts — we love hearing from our readers. If you have a story or a topic you’d like to share, don’t hesitate to reach out. We’re always looking for passionate voices to add to our growing community.</p>
+                <p>Stay connected with us on social media, subscribe to our newsletter for the latest posts, and feel free to explore the wide range of content we have to offer. Let's embark on this journey together!</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer>
+            <div class = "social-links">
+              <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+              <a href = "#"><i class = "fab fa-twitter"></i></a>
+              <a href = "#"><i class = "fab fa-instagram"></i></a>
+              <a href = "#"><i class = "fab fa-pinterest"></i></a>
+            </div>
+            <span>VISHI Blogs</span>
+        </footer>
+        
+        </body>
+        </html>
+        </header>  
+
+    

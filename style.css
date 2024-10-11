@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins',sans-serif;
+    box-sizing:border-box;
+}
+.container{
+    width:100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)),url(images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+}
+nav{
+    width:100%;
+    display:flex;
+    align-items:space-between;
+    justify-content:space-between;
+    padding:10px 0;
+    padding: 0.1rem; 
+    
+}
+
+.logo{
+    width:190px;
+    height:60px;
+    cursor:pointer;
+    margin-left: 0%;
+}
+nav ul{
+    list-style:none;
+    width:100%;
+    text-align: right;
+    padding-right:0px ;
+}
+nav ul li{
+    display:inline-block;
+    margin: 10px 10px;
+    padding-left:35px;
+    padding-right:0px;
+}
+nav ul a{
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    font-weight:bolder;
+     color:black;
+     text-decoration: none;
+     display: inline-block;
+     align-items:space-between;
+     justify-content:space-between;
+     transition: opacity 0.5s ease;
+}
+nav a:hover{
+    opacity: 0.5;
+}
+.btn{
+    display:flex;
+    align-items:center;
+    padding:10px 20px;
+    border:0;
+    outline:0;
+    border-radius:5px;
+    background:rgba(199, 221, 235, 0.9);
+    color:black;
+    font-weight: bolder;
+    
+    cursor:pointer;
+}
+.content{
+    margin: 14%;
+    color:#fff;
+    max-width: 620px;
+}
+.content h1{
+    font-size:70px;
+    font-weight:600;
+    line-height:85px;
+    margin-bottom:100px;
+    
+
+}
+.content p{
+    font-size:25px;
+    font-weight:100;
+    line-height:25px;
+    margin-bottom:70px;
+}
+.content form{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.content form input{
+    border:0;
+    outline:0;
+    width:100%;
+    font-size:16px;
+    padding-left: 10px;
+
+}
+
+.content form .btn{
+    font-size: 20px;
+    font-weight: bolder;
+    color:black;
+    padding: 10px 30px;
+}
+/* about */
+.about{
+    padding: 4.5rem 0;
+}
+.about-text{
+    margin: 2rem 0;
+}
+.about-text > p{
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}
+
+/*footer*/
+footer{
+    background: rgba(0, 0, 0, 0.6);
+    color:white;
+    text-align: center;
+     padding: 0.5rem 0;
+ }
+ .social-links{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 1.4rem;
+ }
+      .social-links a{
+          border: 2px solid #fff;
+          color:#fff;             
+          display: block;
+          width: 40px;
+          height: 40px; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          text-decoration: none;
+          margin: 0 0.3rem;
+          transition: all 0.5s ease;
+         }
+
+             .social-links a:hover{
+                  background:black;
+                  color: var(--exDark);
+             }
+  .footer span{
+     margin-top: 1rem;
+     display: block;
+     font-family: var(--Playfair);
+     letter-spacing: 2px;
+ }
+
+/* Media Queries */
+@media screen and (min-width: 540px){
+ .navbar-nav a{
+     padding-right: 1.2rem;
+     padding-left: 1.2rem;
+ }
+ .banner-title{
+     font-size: 5rem;
+ }
+ .banner form{
+     margin-top: 1.4rem;
+     width: 80%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+}
+
+@media screen and (min-width: 768px){
+ .navbar .container{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .search-input{
+     padding: 0.8rem 0;
+ }
+ .design-content{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 2rem;
+ }
+ .design-item{
+     margin: 0;
+ }
+ .blog-content{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 2rem;
+ }
+}
+
+@media screen and (min-width: 992px){
+ .blog-content{
+     grid-template-columns: repeat(3, 1fr);
+ }
+ .about-content{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     column-gap: 3rem;
+     align-items: center;
+ }
+}
+
+@media screen and (min-width: 1200px){
+ .design-content{
+     grid-template-columns: repeat(3, 1fr);
+ }
+}
+        
+
+
+
+
+
+
+
