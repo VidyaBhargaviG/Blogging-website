@@ -154,10 +154,10 @@ footer{
                   color: var(--exDark);
              }
   .footer span{
-     margin-top: 1rem;
+     margin-top: 0rem;
      display: block;
      font-family: var(--Playfair);
-     letter-spacing: 2px;
+     letter-spacing: 0px;
  }
 
 /* Media Queries */
@@ -218,11 +218,3 @@ footer{
      grid-template-columns: repeat(3, 1fr);
  }
 }
-        
-
-
-
-
-
-
-
