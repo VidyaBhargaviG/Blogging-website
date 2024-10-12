@@ -244,6 +244,95 @@
             </div>
             <span><i><b>SoulScript</b></i></span>
         </footer>
+
+
+
+        <script>
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('.navbar-nav a').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+          
+                const targetId = this.getAttribute('href').substring(1); // remove '#' from href
+                const targetElement = document.getElementById(targetId);
+          
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                } else {
+                  // If the target element doesn't exist (e.g. external links), use the default action
+                  window.location.href = this.getAttribute('href');
+                }
+              });
+            });
+          
+            // Alert for Contact or Newsletter forms (if you add a form later)
+            document.addEventListener('DOMContentLoaded', function () {
+              // Check if a form exists
+              const contactForm = document.querySelector('#contact-form');
+              if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                  alert('Thank you for contacting us! We will get back to you shortly.');
+                  contactForm.reset(); // Reset form fields
+                });
+              }
+            });
+          
+            // Dynamic content update - welcome message based on time of day
+            document.addEventListener('DOMContentLoaded', function () {
+              const greetingElement = document.querySelector('.about-text h2');
+              const hour = new Date().getHours();
+              let greeting;
+          
+              if (hour < 12) {
+                greeting = 'Good Morning! Join the Conversation';
+              } else if (hour < 18) {
+                greeting = 'Good Afternoon! Join the Conversation';
+              } else {
+                greeting = 'Good Evening! Join the Conversation';
+              }
+          
+              greetingElement.textContent = greeting;
+            });
+          
+            // Optional: Add smooth scroll to top button
+            const scrollToTopButton = document.createElement('button');
+            scrollToTopButton.textContent = '⬆';
+            scrollToTopButton.setAttribute('id', 'scrollToTop');
+            scrollToTopButton.style.cssText = `
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              padding: 10px 15px;
+              font-size: 16px;
+              border: none;
+              border-radius: 50%;
+              background-color: #333;
+              color: #fff;
+              cursor: pointer;
+              display: none;
+            `;
+            document.body.appendChild(scrollToTopButton);
+          
+            window.addEventListener('scroll', function () {
+              if (window.pageYOffset > 300) {
+                scrollToTopButton.style.display = 'block';
+              } else {
+                scrollToTopButton.style.display = 'none';
+              }
+            });
+          
+            scrollToTopButton.addEventListener('click', function () {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            });
+          </script>
+          
         
         </body>
         </html>

@@ -264,6 +264,29 @@ footer{
      grid-template-columns: repeat(3, 1fr);
  }
 }
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(199, 221, 235, 0.9);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+/* Navbar Shrink Effect */
+.navbar-shrink {
+  background: rgba(0, 0, 0, 0.9); /* Darker background */
+  padding: 5px 0; /* Reduce padding when navbar shrinks */
+}
+
 </style>
   <head>
     <meta charset="utf-8">
@@ -403,7 +426,58 @@ footer{
     <span><i><b>SoulScript</b></i></span>
 </footer>
 
+<script>
+  // Like Button Toggle
+  const likeButtons = document.querySelectorAll('.blog-img span');
+
+  likeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.classList.toggle('liked');
+      // Change heart icon color or class on click
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('far')) {
+        icon.classList.remove('far');
+        icon.classList.add('fas');  // Solid heart (liked)
+      } else {
+        icon.classList.remove('fas');
+        icon.classList.add('far');  // Outline heart (unliked)
+      }
+    });
+  });
+
+  // Smooth Scroll-to-Top Button
+  const scrollButton = document.createElement('button');
+  scrollButton.textContent = 'Top';
+  scrollButton.className = 'scroll-to-top';
+  document.body.appendChild(scrollButton);
+
+  scrollButton.style.display = 'none';  // Initially hidden
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollButton.style.display = 'block';  // Show button when scrolled down
+    } else {
+      scrollButton.style.display = 'none';  // Hide button when near top
+    }
+  });
+
+  scrollButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Navbar Shrink on Scroll
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-shrink');
+    } else {
+      navbar.classList.remove('navbar-shrink');
+    }
+  });
+
+</script>
+
 </body>
 </html>
-</header>  
+
 
