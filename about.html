@@ -268,19 +268,6 @@
               });
             });
           
-            // Alert for Contact or Newsletter forms (if you add a form later)
-            document.addEventListener('DOMContentLoaded', function () {
-              // Check if a form exists
-              const contactForm = document.querySelector('#contact-form');
-              if (contactForm) {
-                contactForm.addEventListener('submit', function (e) {
-                  e.preventDefault();
-                  alert('Thank you for contacting us! We will get back to you shortly.');
-                  contactForm.reset(); // Reset form fields
-                });
-              }
-            });
-          
             // Dynamic content update - welcome message based on time of day
             document.addEventListener('DOMContentLoaded', function () {
               const greetingElement = document.querySelector('.about-text h2');
@@ -298,7 +285,7 @@
               greetingElement.textContent = greeting;
             });
           
-            // Optional: Add smooth scroll to top button
+            // Add smooth scroll to top button
             const scrollToTopButton = document.createElement('button');
             scrollToTopButton.textContent = '⬆';
             scrollToTopButton.setAttribute('id', 'scrollToTop');
